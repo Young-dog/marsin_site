@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../res/common_styles.dart';
-import '../widgets/navigation_bar/navigation_bar.dart';
 import '../widgets/start_widget/start_widget.dart';
 
 class HomePage extends StatelessWidget {

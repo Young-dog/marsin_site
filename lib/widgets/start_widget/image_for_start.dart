@@ -9,7 +9,6 @@ class ImageForStartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double wh = MediaQuery.of(context).size.width;
-    double hh = MediaQuery.of(context).size.height;
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       mainAxisSize: MainAxisSize.max,

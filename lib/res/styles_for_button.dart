@@ -9,5 +9,5 @@ Gradient gradientForButton = LinearGradient(
   begin: Alignment.bottomCenter,
 );
 
-Color colorForButton1 = Color(0xFFDA0D00).withOpacity(0.9);
-Color colorForButton2 = Color(0xFFFF6A60);
+Color colorForButton1 = const Color(0xFFDA0D00).withOpacity(0.9);
+Color colorForButton2 = const Color(0xFFFF6A60);
