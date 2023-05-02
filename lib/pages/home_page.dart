@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../res/common_styles.dart';
-import '../widgets/navigation_bar/navigation_bar.dart';
+import '../widgets/about_us_widget/about_us.dart';
 import '../widgets/start_widget/start_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +9,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double wh = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -16,7 +18,9 @@ class HomePage extends StatelessWidget {
         ),
         child: ListView(
           children: <Widget>[
-            StartWidget()
+            StartWidget(),
+            SizedBox(height: wh * 0.05,),
+            AboutUsWidget(),
           ],
         ),
       ),
