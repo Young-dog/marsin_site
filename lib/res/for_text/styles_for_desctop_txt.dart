@@ -96,3 +96,17 @@ final styleForAdvantagesBold = GoogleFonts.ibmPlexSerif(
       fontFamily: "IBMPlexSerifBold",
       fontWeight: FontWeight.w700),
 );
+
+final styleBoldAdvantagesForDesctop = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+      shadows: <Shadow>[
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 1,
+        ),
+      ],
+      color: Colors.white,
+      fontSize: 70,
+      letterSpacing: 0.07,
+      fontWeight: FontWeight.w700),
+);
