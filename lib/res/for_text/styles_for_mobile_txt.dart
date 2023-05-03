@@ -45,3 +45,31 @@ final styleRegularMobile = GoogleFonts.ibmPlexSerif(
       letterSpacing: 0.07,
       fontWeight: FontWeight.w400),
 );
+
+final styleBoldMobile = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+      shadows: <Shadow>[
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 1,
+        ),
+      ],
+      color: Colors.white,
+      fontSize: 25,
+      letterSpacing: 0.07,
+      fontWeight: FontWeight.w700),
+);
+
+final styleBoldAdvantagesForMobile = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+      shadows: <Shadow>[
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 1,
+        ),
+      ],
+      color: Colors.white,
+      fontSize: 60,
+      letterSpacing: 0.07,
+      fontWeight: FontWeight.w700),
+);
