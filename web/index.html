@@ -41,6 +41,21 @@
 </head>
 <body>
   <script>
+    import { initializeApp } from "firebase/app";
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyB5GFiGSqPib2UyoHfPi4IROExAlSrtzRA",
+    authDomain: "marsin-e4819.firebaseapp.com",
+    projectId: "marsin-e4819",
+    storageBucket: "marsin-e4819.appspot.com",
+    messagingSenderId: "105133918015",
+    appId: "1:105133918015:web:638514e8d18e1f5f70f58a"
+    };
+
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+  <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({

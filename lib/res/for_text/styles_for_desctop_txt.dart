@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 part 'styles_for_mobile_txt.dart';
 
 dynamic styleForTextInStartWidgetBoldItalic(BuildContext context) {
@@ -74,6 +75,24 @@ dynamic styleRegularForButton(BuildContext context) {
   );
 }
 
+dynamic styleBoldForDesctop(BuildContext context) {
+  double wh = MediaQuery.of(context).size.width;
+
+  return GoogleFonts.ibmPlexSerif(
+    textStyle: TextStyle(
+        shadows: <Shadow>[
+          Shadow(
+            offset: Offset(2, 2),
+            blurRadius: 1,
+          ),
+        ],
+        color: Colors.white,
+        fontSize: wh * 0.04,
+        letterSpacing: 0.07,
+        fontWeight: FontWeight.w700),
+  );
+}
+
 final styleBold = GoogleFonts.ibmPlexSerif(
   textStyle: const TextStyle(
       shadows: <Shadow>[
@@ -110,3 +129,71 @@ final styleBoldAdvantagesForDesctop = GoogleFonts.ibmPlexSerif(
       letterSpacing: 0.07,
       fontWeight: FontWeight.w700),
 );
+
+dynamic styleForCategoriesNDesctop(BuildContext context) {
+  double wh = MediaQuery.of(context).size.width;
+
+  return GoogleFonts.ibmPlexSerif(
+    textStyle: TextStyle(
+        shadows: const <Shadow>[
+          Shadow(
+            offset: Offset(2, 2),
+            blurRadius: 1,
+          ),
+        ],
+        color: Colors.white,
+        fontSize: wh * 0.025,
+        letterSpacing: 0.07,
+        fontWeight: FontWeight.w400),
+  );
+}
+
+final styleForModesY = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+    decoration: TextDecoration.underline,
+    shadows: <Shadow>[
+      Shadow(
+        offset: Offset(2, 2),
+        blurRadius: 1,
+      ),
+    ],
+    color: Colors.white,
+    fontSize: 27,
+    fontFamily: "IBMPlexSerif",
+    letterSpacing: 0.07,
+  ),
+);
+
+final styleForModesN = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+    shadows: <Shadow>[
+      Shadow(
+        offset: Offset(2, 2),
+        blurRadius: 1,
+      ),
+    ],
+    color: Colors.white,
+    fontSize: 27,
+    fontFamily: "IBMPlexSerif",
+    letterSpacing: 0.07,
+  ),
+);
+
+dynamic styleForCategoriesYDesctop(BuildContext context) {
+  double wh = MediaQuery.of(context).size.width;
+
+  return GoogleFonts.ibmPlexSerif(
+    textStyle: TextStyle(
+        decoration: TextDecoration.underline,
+        shadows: const <Shadow>[
+          Shadow(
+            offset: Offset(2, 2),
+            blurRadius: 1,
+          ),
+        ],
+        color: Colors.white,
+        fontSize: wh * 0.025,
+        letterSpacing: 0.07,
+        fontWeight: FontWeight.w400),
+  );
+}
