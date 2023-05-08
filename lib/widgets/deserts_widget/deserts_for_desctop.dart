@@ -7,7 +7,6 @@ import 'admin_auth/admin_auth_widget.dart';
 import 'buttons/arrow_buttons_and_catalog.dart';
 import 'buttons/buttons_for_categories.dart';
 import 'buttons/my_icon_button.dart';
-part 'deserts_for_mobile.dart';
 
 final adminProvider = StateProvider<bool>((ref) {
   AdminControl adminControl = AdminControl();
