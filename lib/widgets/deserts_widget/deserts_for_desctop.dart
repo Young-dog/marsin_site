@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:marsin_site/models/admin_controll.dart';
 import 'package:marsin_site/widgets/deserts_widget/title.dart';
 
+import '../../main.dart';
 import 'admin_auth/admin_auth_widget.dart';
 import 'buttons/arrow_buttons_and_catalog.dart';
 import 'buttons/buttons_for_categories.dart';
 import 'buttons/my_icon_button.dart';
 
-final adminProvider = StateProvider<bool>((ref) {
-  AdminControl adminControl = AdminControl();
-  return adminControl.adminActivity;
-});
+
 
 class DesertsCatalogForDesctop extends ConsumerStatefulWidget {
   const DesertsCatalogForDesctop({Key? key}) : super(key: key);

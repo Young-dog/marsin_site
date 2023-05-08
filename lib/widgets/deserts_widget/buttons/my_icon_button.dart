@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../deserts_for_desctop.dart';
+import '../../../main.dart';
 
 class MyIconButton extends ConsumerWidget {
   const MyIconButton({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../main.dart';
 import '../../../res/for_text/styles_for_desctop_txt.dart';
-import '../deserts_for_desctop.dart';
 
 
 class AdminAuthWidget extends ConsumerStatefulWidget {
