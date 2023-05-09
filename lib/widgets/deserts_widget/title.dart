@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marsin_site/utils/responsive_layout/responsive_layout.dart';
-
 import '../../res/for_text/styles_for_desctop_txt.dart';
 
 class TitleForDesertsCatalog extends StatelessWidget {

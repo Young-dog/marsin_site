@@ -9,7 +9,7 @@ final backColorSite = LinearGradient(
   end: Alignment.centerRight,
 );
 
-SizedBox sizedBoxForDesctop = const SizedBox(
+SizedBox sizedBox = const SizedBox(
   height: 35,
 );
 

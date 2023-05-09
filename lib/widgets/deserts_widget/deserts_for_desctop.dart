@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:marsin_site/widgets/deserts_widget/pass_widget.dart';
 import 'package:marsin_site/widgets/deserts_widget/title.dart';
 
-import '../../res/for_text/styles_for_desctop_txt.dart';
-import 'button.dart';
+import '../../main.dart';
+import 'admin_auth/admin_auth_widget.dart';
+import 'buttons/arrow_buttons_and_catalog.dart';
+import 'buttons/buttons_for_categories.dart';
+import 'buttons/my_icon_button.dart';
 
-part 'deserts_for_mobile.dart';
+
 
 class DesertsCatalogForDesctop extends ConsumerStatefulWidget {
   const DesertsCatalogForDesctop({Key? key}) : super(key: key);
@@ -19,25 +21,15 @@ class DesertsCatalogForDesctop extends ConsumerStatefulWidget {
 class _DesertsCatalogForDesctopState extends ConsumerState<DesertsCatalogForDesctop> {
 
 
-  final List<String> _categories = ["Фигурные наборы", "Букеты"];
-  String category = "Фигурные наборы";
-
-
   @override
   Widget build(BuildContext context) {
-
-    final adminPanelActive = ref.watch(adminPanelProvider);
 
     double wh = MediaQuery.of(context).size.width;
     double hh = MediaQuery.of(context).size.height;
 
-    dynamic getStyle(String name) {
-      if (category == name) {
-        return styleForCategoriesYDesctop(context);
-      } else {
-        return styleForCategoriesNDesctop(context);
-      }
-    }
+
+
+    bool adminControl = ref.watch(adminProvider);
 
     return SizedBox(
       height: hh,
@@ -56,64 +48,13 @@ class _DesertsCatalogForDesctopState extends ConsumerState<DesertsCatalogForDesc
                 ],
               ),
               //Buttton for categories
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      setState(() {
-                        category = _categories[0];
-                      });
-                    },
-                    child: Text(
-                      _categories[0],
-                      style: getStyle(_categories[0]),
-                    ),
-                  ),
-                  SizedBox(
-                    width: wh * 0.35,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      setState(() {
-                        category = _categories[1];
-                      });
-                    },
-                    child: Text(
-                      _categories[1],
-                      style: getStyle(_categories[1]),
-                    ),
-                  ),
-                ],
-              ),
+              const ButtonsForCategories(),
               //Deserts Catalog
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.keyboard_arrow_left_outlined,
-                        color: Colors.white,
-                      )),
-                  SizedBox(
-                    height: hh * 0.7,
-                    width: wh * 0.8,
-                    child: Container(),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.keyboard_arrow_right_outlined,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
+              const ArrowButtons(),
             ],
           ),
-          ControlPassWidget(),
+          adminControl == true ?
+          const AdminAuthWidget() : Container(),
         ],
       ),
     );

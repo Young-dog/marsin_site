@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../../models/admin_panel_control.dart';
+import '../../../main.dart';
 
-class MyIconButton extends StatefulWidget {
+class MyIconButton extends ConsumerWidget {
   const MyIconButton({Key? key}) : super(key: key);
-
-  @override
-  State<MyIconButton> createState() => _MyIconButtonState();
-}
-
-class _MyIconButtonState extends State<MyIconButton> {
 
   final logo = 'assets/images/cupcake.png';
 
+  void onSubmit(WidgetRef ref)  {
+    ref.read(adminProvider.notifier).update((state) => true);
+  }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    
     double wh = MediaQuery.of(context).size.width;
 
     return MaterialButton(
       onPressed: () {
-        setState(() {
-          AdminControl.adminPanelActive = !AdminControl.adminPanelActive;
-        });
+          onSubmit(ref);
       },
       hoverColor: Colors.transparent,
       focusColor: Colors.transparent,
