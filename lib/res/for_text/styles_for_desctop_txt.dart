@@ -197,3 +197,17 @@ dynamic styleForCategoriesYDesctop(BuildContext context) {
         fontWeight: FontWeight.w400),
   );
 }
+
+final styleForField = GoogleFonts.ibmPlexSerif(
+  textStyle: const TextStyle(
+      shadows: <Shadow>[
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 1,
+        ),
+      ],
+      color: Colors.white,
+      fontSize: 20,
+      letterSpacing: 0.07,
+      fontWeight: FontWeight.w400),
+);

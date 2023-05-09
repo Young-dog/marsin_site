@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../main.dart';
 import '../../../res/for_text/styles_for_desctop_txt.dart';
+import '../../admin_panel_widget/admin_panel.dart';
 
 
 class AdminAuthWidget extends ConsumerStatefulWidget {
@@ -70,7 +71,7 @@ class _AdminAuthWidgetState extends ConsumerState<AdminAuthWidget> {
                   ),
                   onPressed: () {
                     if (_controlPass(_passwd)) {
-                      // Navigator.of(context).pushReplacementNamed(AdminPanel.id);
+                       Navigator.of(context).pushReplacementNamed(AdminPanel.id);
                     }
                   },
                 ),
