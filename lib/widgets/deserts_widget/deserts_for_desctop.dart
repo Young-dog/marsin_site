@@ -1,36 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:marsin_site/widgets/deserts_widget/pass_widget.dart';
 import 'package:marsin_site/widgets/deserts_widget/title.dart';
 
 import '../../res/for_text/styles_for_desctop_txt.dart';
+import 'button.dart';
 
 part 'deserts_for_mobile.dart';
 
-class DesertsCatalogForDesctop extends StatefulWidget {
+class DesertsCatalogForDesctop extends ConsumerStatefulWidget {
   const DesertsCatalogForDesctop({Key? key}) : super(key: key);
 
   @override
-  State<DesertsCatalogForDesctop> createState() =>
+  ConsumerState<DesertsCatalogForDesctop> createState() =>
       _DesertsCatalogForDesctopState();
 }
 
-class _DesertsCatalogForDesctopState extends State<DesertsCatalogForDesctop> {
-  final logo = 'assets/images/cupcake.png';
+class _DesertsCatalogForDesctopState extends ConsumerState<DesertsCatalogForDesctop> {
+
 
   final List<String> _categories = ["Фигурные наборы", "Букеты"];
   String category = "Фигурные наборы";
 
-// set up the buttons
-  String _passwd = "";
-  bool _adminPanelActive = false;
-
-  bool _controlPass(value) {
-    bool pass = false;
-    if (value == "123456") pass = true;
-    return pass;
-  }
 
   @override
   Widget build(BuildContext context) {
+
+    final adminPanelActive = ref.watch(adminPanelProvider);
 
     double wh = MediaQuery.of(context).size.width;
     double hh = MediaQuery.of(context).size.height;
@@ -52,17 +48,7 @@ class _DesertsCatalogForDesctopState extends State<DesertsCatalogForDesctop> {
               //Icon & title
               Row(
                 children: [
-                  MaterialButton(
-                    onPressed: () {
-                      setState(() {
-                        _adminPanelActive = !_adminPanelActive;
-                      });
-                    },
-                    hoverColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    mouseCursor: MouseCursor.defer,
-                    child: Image.asset(logo, width: wh*0.07,),
-                  ),
+                  const MyIconButton(),
                   SizedBox(
                     width: wh / 5,
                   ),
@@ -127,59 +113,7 @@ class _DesertsCatalogForDesctopState extends State<DesertsCatalogForDesctop> {
               ),
             ],
           ),
-          _adminPanelActive == true ?
-          Align(
-            alignment: Alignment.center,
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  _adminPanelActive = false;
-                });
-              },
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height,
-                color: Colors.white.withOpacity(0.1),
-                child: AlertDialog(
-                  backgroundColor: const Color(0xFF4B1A3D),
-                  title: Text(
-                    "Авторизация",
-                    style: styleBold,
-                  ),
-                  actions: [
-                    TextField(
-                      obscureText: true,
-                      onChanged: (value) {
-                        _passwd = value;
-                      },
-                      decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              width: 1,
-                              color: Colors.white,
-                            ),
-                            borderRadius: BorderRadius.circular(70),
-                          )),
-                    ),
-                    Align(
-                      alignment: Alignment.center,
-                      child: TextButton(
-                        child: Text(
-                          "Войти",
-                          style: styleRegular
-                        ),
-                        onPressed: () {
-                          if (_controlPass(_passwd)) {
-                            // Navigator.of(context).pushReplacementNamed(AdminPanel.id);
-                          }
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ) : Container(),
+          ControlPassWidget(),
         ],
       ),
     );

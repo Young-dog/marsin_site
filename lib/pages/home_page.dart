@@ -7,6 +7,7 @@ import '../widgets/deserts_widget/deserts_for_desctop.dart';
 import '../widgets/start_widget/start_widget.dart';
 
 class HomePage extends StatelessWidget {
+  static const String id = 'home_page';
   const HomePage({Key? key}) : super(key: key);
 
   @override
