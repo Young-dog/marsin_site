@@ -49,20 +49,6 @@ dynamic styleItalic(BuildContext context) {
   );
 }
 
-final styleRegular = GoogleFonts.ibmPlexSerif(
-  textStyle: const TextStyle(
-      shadows: <Shadow>[
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 1,
-        ),
-      ],
-      color: Colors.white,
-      fontSize: 32,
-      letterSpacing: 0.07,
-      fontWeight: FontWeight.w400),
-);
-
 dynamic styleRegularForButton(BuildContext context) {
   double wh = MediaQuery
       .of(context)
@@ -105,43 +91,6 @@ dynamic styleBoldForDesctop(BuildContext context) {
   );
 }
 
-final styleBold = GoogleFonts.ibmPlexSerif(
-  textStyle: const TextStyle(
-      shadows: <Shadow>[
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 1,
-        ),
-      ],
-      color: Colors.white,
-      fontSize: 40,
-      letterSpacing: 0.07,
-      fontWeight: FontWeight.w700),
-);
-
-final styleForAdvantagesBold = GoogleFonts.ibmPlexSerif(
-  textStyle: const TextStyle(
-      color: Colors.white,
-      fontSize: 70,
-      letterSpacing: 0.7,
-      fontFamily: "IBMPlexSerifBold",
-      fontWeight: FontWeight.w700),
-);
-
-final styleBoldAdvantagesForDesctop = GoogleFonts.ibmPlexSerif(
-  textStyle: const TextStyle(
-      shadows: <Shadow>[
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 1,
-        ),
-      ],
-      color: Colors.white,
-      fontSize: 70,
-      letterSpacing: 0.07,
-      fontWeight: FontWeight.w700),
-);
-
 dynamic styleForCategoriesNDesctop(BuildContext context) {
   double wh = MediaQuery
       .of(context)
@@ -162,35 +111,6 @@ dynamic styleForCategoriesNDesctop(BuildContext context) {
         fontWeight: FontWeight.w400),
   );
 }
-
-final styleForModesY = GoogleFonts.ibmPlexSerif(
-    textStyle: const TextStyle(
-        decoration: TextDecoration.underline,
-        shadows: <Shadow>[
-          Shadow(
-            offset: Offset(2, 2),
-            blurRadius: 1,
-          ),
-        ],
-        color: Colors.white,
-        fontSize: 27,
-        letterSpacing: 0.07,
-        fontWeight: FontWeight.w400)
-);
-
-final styleForModesN = GoogleFonts.ibmPlexSerif(
-    textStyle: const TextStyle(
-        shadows: <Shadow>[
-          Shadow(
-            offset: Offset(2, 2),
-            blurRadius: 1,
-          ),
-        ],
-        color: Colors.white,
-        fontSize: 27,
-        letterSpacing: 0.07,
-        fontWeight: FontWeight.w400)
-);
 
 dynamic styleForCategoriesYDesctop(BuildContext context) {
   double wh = MediaQuery
@@ -213,17 +133,3 @@ dynamic styleForCategoriesYDesctop(BuildContext context) {
         fontWeight: FontWeight.w400),
   );
 }
-
-final styleForField = GoogleFonts.ibmPlexSerif(
-  textStyle: const TextStyle(
-      shadows: <Shadow>[
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 1,
-        ),
-      ],
-      color: Colors.white,
-      fontSize: 20,
-      letterSpacing: 0.07,
-      fontWeight: FontWeight.w400),
-);

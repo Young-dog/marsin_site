@@ -12,7 +12,7 @@ part 'desert_event.dart';
 part 'desert_state.dart';
 
 class DesertBloc extends Bloc<DesertEvent, DesertState> {
-  DesertBloc() : super(DesertState()) {
+  DesertBloc() : super(DesertInitialState()) {
     on<DesertGetDesertEvent>(_onGetDesert);
     // on<DesertEditDesertEvent>(_onEditDesert);
     // on<DesertEditDesertEvent>(_onDelDesert);
@@ -21,8 +21,8 @@ class DesertBloc extends Bloc<DesertEvent, DesertState> {
 
   final products = FirebaseFirestore.instance.collection('deserts');
 
-  _onGetDesert(DesertGetDesertEvent event, Emitter<DesertState> emit) async {
-    emit(state.copyWith(isLoading: true));
+  _onGetDesert(DesertGetDesertEvent event, emit) async {
+    emit(const DesertLoadingState());
     final querySnapshot = await products.where("category", isEqualTo: event.category).get();
     List<DesertForWeb> deserts = [];
     for (var queryDocumentSnapshot in querySnapshot.docs) {
@@ -34,19 +34,10 @@ class DesertBloc extends Bloc<DesertEvent, DesertState> {
       );
       deserts.add(desertForWeb);
     }
-    emit(state.copyWith(products: deserts));
-    print('Bloc ${state.copyWith().products}');
+    emit(DesertLoadedState(products: deserts));
+    print('Bloc $deserts');
   }
 
-  _onEditDesert(DesertEditDesertEvent event, Emitter<DesertState> emit) async {
-    final desert = event.product;
-    await products.doc(desert.id).update({
-      "timestamp": Timestamp.now(),
-      "name": desert.name,
-      "price": desert.price,
-    });
-    emit(state.copyWith(isLoading: true));
-  }
 
   // _onDelDesert(DesertEditDesertEvent event, Emitter<DesertState> emit) async {
   //   final desert = event.product;
