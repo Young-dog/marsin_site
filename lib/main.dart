@@ -1,7 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:marsin_site/pages/home_page.dart';
-
+import 'package:marsin_site/utils/firebase_options.dart';
+import 'marsin_site.dart';
 import 'models/admin_controll.dart';
 
 final adminProvider = StateProvider<bool>((ref) {
@@ -9,7 +10,11 @@ final adminProvider = StateProvider<bool>((ref) {
   return adminControl.adminActivity;
 });
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     const ProviderScope(
       child: MyApp(),
@@ -17,14 +22,4 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
-      routes: {},
-    );
-  }
-}

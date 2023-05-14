@@ -10,7 +10,7 @@ part 'deserts_state.dart';
 class DesertsCubit extends Cubit<DesertsState> {
   DesertsCubit() : super(const DesertsAdd());
 
-  Future<void> addDesert({required String name, required Uint8List imageFile, required String price, required String category}) async {
+  Future<void> addDesert({required String name, required Uint8List imageFile, required String price, required String category, required Timestamp timestamp}) async {
     late String imageUrl;
     if (name.trim().isNotEmpty) {
       //1. write image to storage
@@ -27,7 +27,7 @@ class DesertsCubit extends Cubit<DesertsState> {
     }
 
     FirebaseFirestore.instance.collection("deserts").add({
-      "timestamp": Timestamp.now(),
+      "timestamp": timestamp,
       "urlImage": imageUrl,
       "name": name,
       "price": price,
