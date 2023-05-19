@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../res/common_styles.dart';
+import '../../theme/common_styles.dart';
 import '../about_us/about_us.dart';
 import '../deserts_widget/deserts_for_desctop.dart';
 import '../start/start.dart';

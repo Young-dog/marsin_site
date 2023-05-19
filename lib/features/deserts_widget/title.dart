@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../res/for_text/styles_for_desctop_txt.dart';
+import '../../theme/for_text/styles_for_desctop_txt.dart';
 
 class TitleForDesertsCatalog extends StatelessWidget {
   const TitleForDesertsCatalog({Key? key}) : super(key: key);

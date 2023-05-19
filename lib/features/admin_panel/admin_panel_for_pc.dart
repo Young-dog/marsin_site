@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marsin_site/features/admin_panel/title_and_buttons/modes_for_admin_panel.dart';
 import 'package:marsin_site/features/admin_panel/title_and_buttons/title_for_admin_panel.dart';
-import 'package:marsin_site/res/common_styles.dart';
+import 'package:marsin_site/theme/common_styles.dart';
 import '../../di/bloc/deserts_cubit.dart';
-import '../../models/desert/desert_for_add.dart';
-import '../../models/desert/desert_for_web.dart';
 import '../../models/desert_image.dart';
 import '../../models/modes_for_admin_panel.dart';
 import '../../features/home_page/home_page.dart';
+import '../../repositories/models/desert/desert.dart';
 import 'admin_function.dart';
 import 'catalog.dart';
 

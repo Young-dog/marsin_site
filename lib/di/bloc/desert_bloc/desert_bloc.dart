@@ -3,9 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fires;
-import '../../../models/desert/desert.dart';
-import '../../../models/desert/desert_for_add.dart';
-import '../../../models/desert/desert_for_web.dart';
 
 
 part 'desert_event.dart';

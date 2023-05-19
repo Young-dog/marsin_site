@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../di/bloc/desert_bloc/desert_bloc.dart';
-import '../../models/desert/desert_for_web.dart';
-import '../../res/for_text/styles_for_desctop_txt.dart';
+import '../../repositories/models/desert/desert.dart';
 
 class CatalogDesert extends StatefulWidget {
   const CatalogDesert({Key? key}) : super(key: key);
@@ -89,7 +87,7 @@ class _CatalogDesertState extends State<CatalogDesert> {
               }
           );
         }
-        return CircularProgressIndicator();;
+        return CircularProgressIndicator();
       }
     );
   }

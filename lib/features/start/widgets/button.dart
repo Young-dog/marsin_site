@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marsin_site/utils/responsive_layout/responsive_layout.dart';
-
-import '../../../res/for_text/styles_for_desctop_txt.dart';
-import '../../../res/styles_for_button.dart';
+import '../../../theme/for_text/styles_for_desctop_txt.dart';
+import '../../../theme/styles_for_button.dart';
 
 
 class ButtonStart extends StatelessWidget {

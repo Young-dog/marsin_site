@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:marsin_site/di/bloc/deserts_cubit.dart';
-import 'desert.dart';
+part of 'desert.dart';
 
 class DesertForWeb extends Desert {
   final String id;

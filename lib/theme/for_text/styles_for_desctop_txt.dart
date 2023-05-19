@@ -78,7 +78,7 @@ dynamic styleBoldForDesctop(BuildContext context) {
 
   return GoogleFonts.ibmPlexSerif(
     textStyle: TextStyle(
-        shadows: <Shadow>[
+        shadows: const <Shadow>[
           Shadow(
             offset: Offset(2, 2),
             blurRadius: 1,

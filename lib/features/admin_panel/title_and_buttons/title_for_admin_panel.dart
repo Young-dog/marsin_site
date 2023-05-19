@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marsin_site/res/for_text/styles_for_desctop_txt.dart';
 
 class TitleForAdminPanel extends StatelessWidget {
   final String title;

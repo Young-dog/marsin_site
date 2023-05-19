@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:marsin_site/di/bloc/deserts_cubit.dart';
 import 'package:marsin_site/models/modes_for_admin_panel.dart';
 
-import '../../../res/for_text/styles_for_desctop_txt.dart';
+import '../../../theme/for_text/styles_for_desctop_txt.dart';
+
 
 class ButtonsForModesAdminPanel extends StatefulWidget {
   final DesertsState state;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../res/for_text/styles_for_desctop_txt.dart';
+import '../../../theme/for_text/styles_for_desctop_txt.dart';
 
 class LogoMarsin extends StatelessWidget {
   const LogoMarsin({Key? key}) : super(key: key);

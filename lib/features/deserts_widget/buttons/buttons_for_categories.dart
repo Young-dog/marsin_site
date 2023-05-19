@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../../models/categories.dart';
-import '../../../res/for_text/styles_for_desctop_txt.dart';
+import '../../../theme/for_text/styles_for_desctop_txt.dart';
 
 class ButtonsForCategories extends StatefulWidget {
   const ButtonsForCategories({Key? key}) : super(key: key);

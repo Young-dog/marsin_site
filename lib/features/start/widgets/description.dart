@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../res/for_text/styles_for_desctop_txt.dart';
+import '../../../theme/for_text/styles_for_desctop_txt.dart';
 import '../../../utils/responsive_layout/responsive_layout.dart';
 import 'button.dart';
 
